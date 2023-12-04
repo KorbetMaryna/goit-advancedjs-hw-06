@@ -1,17 +1,18 @@
-/*
-  Використовуйте generics та інтерфейси, щоб виправити помилку в наступних класах:
-*/
+//TODO: Використовуйте generics та інтерфейси, щоб виправити помилку в наступних класах:
 
-class Component {
-  constructor (public props:T) {
+interface Props{
+  title: string;
+}
 
+class Component<T extends Props> {
+  constructor(public props: T) {
   }
 }
 
-class Page extends Component {
+class Page extends Component<{ title: string }>{
   pageInfo () {
     console.log(this.props.title);
   }
 }
 
-export {};
+export {Page};
