@@ -23,4 +23,4 @@ function createOrUpdateUser(initialValues: Partial<Pick<User, 'email' | 'passwor
 
 createOrUpdateUser({ email: 'user@mail.com', password: 'password123' });
 
-export {};
+export {createOrUpdateUser};
